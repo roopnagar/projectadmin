@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<p>Admin</p>
+	<form action="#" th:action="@{/updateadmin}" th:object="${user}"
+		th:method="put">
+		<p>
+			userid : <input type="text" th:field="*{userId}" />
+		</p>
+		<div th:object="${userdetails}">
+<p>
+			id : <input type="text" th:field="*{id}" />
+		</p>
+			
+			<p>
+				First Name : <input type="text" th:field="*{firstName}" />
+			</p>
+
+
+			<p>
+				Last Name : <input type="text" th:field="*{lastName}" />
+			</p>
+			<p>
+				Email : <input type="text" th:field="*{email}" />
+			</p>
+		</div>
+
+		<p>
+			<input type="submit" value="submit" />
+		</p>
+	</form>
+
+</body>
+</html>

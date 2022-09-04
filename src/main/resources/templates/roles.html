@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<p>Add roles:</p>
+	<form action="#" th:action="@{/saverole}" th:object="${role}"
+		method="post">
+		
+		<p>
+			Role Name : <input type="text" th:field="*{name}" />
+		</p>
+		<p>
+			<input type="submit" value="Submit" />
+		</p>
+	</form>
+	<p th:text="${roleData}"></p>
+	</body>
+	</html>

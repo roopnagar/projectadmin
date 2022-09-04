@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="#" th:action="@{/deleteuser}" th:object="${user}"
+		th:method="delete">
+		<p>
+			UserId : <input type="text" th:field="*{userId}" />
+		</p>
+		<p>
+			<input type="submit" value="submit" />
+		</p>
+	</form>
+
+	<p th:text="${msg}" />
+
+
+</body>
+</html>
